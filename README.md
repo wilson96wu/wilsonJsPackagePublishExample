@@ -1,35 +1,111 @@
-# Test Package 1
 
-This is the README file for the `index.ts` file in the `testPackage1` project.
+```md
+# Wilson JS Package Publish Example
+
+A simple math utility package for Cocos Creator projects.
 
 ## Table of Contents
 
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Usage](#usage)
+- [API](#api)
+  - [addVectors](#addvectors)
+  - [subtractVectors](#subtractvectors)
+  - [dotProduct](#dotproduct)
+  - [magnitude](#magnitude)
+- [Testing](#testing)
 - [Contributing](#contributing)
 - [License](#license)
 
 ## Introduction
 
-`index.ts` is the main entry point for the `testPackage1` project. It contains the core functionality and serves as the starting point for the application.
+This package provides basic vector math operations such as addition, subtraction, dot product, and magnitude calculation. It is designed to be used in Cocos Creator projects.
 
 ## Installation
 
-To install the dependencies for this project, run the following command:
+To install the package, run the following command:
 
 ```bash
-npm install
+npm install wilson-js-package-publish-example
 ```
 
 ## Usage
 
-To run the project, use the following command:
+To use the package, import the functions you need from the `index.js` file:
 
-```bash
-npm start
+```js
+import { addVectors, subtractVectors, dotProduct, magnitude } from 'wilson-js-package-publish-example';
+
+const v1 = { x: 3, y: 4 };
+const v2 = { x: 1, y: 2 };
+
+console.log("Add Vectors:", addVectors(v1, v2));         // { x: 4, y: 6 }
+console.log("Subtract Vectors:", subtractVectors(v1, v2)); // { x: 2, y: 2 }
+console.log("Dot Product:", dotProduct(v1, v2));         // 11
+console.log("Magnitude of v1:", magnitude(v1));           // 5
 ```
 
+## API
+
+### addVectors
+
+Adds two vectors.
+
+```js
+function addVectors(v1, v2)
+```
+
+- **v1**: Object - The first vector.
+- **v2**: Object - The second vector.
+
+Returns an object representing the sum of the two vectors.
+
+### subtractVectors
+
+Subtracts the second vector from the first vector.
+
+```js
+function subtractVectors(v1, v2)
+```
+
+- **v1**: Object - The first vector.
+- **v2**: Object - The second vector.
+
+Returns an object representing the difference of the two vectors.
+
+### dotProduct
+
+Calculates the dot product of two vectors.
+
+```js
+function dotProduct(v1, v2)
+```
+
+- **v1**: Object - The first vector.
+- **v2**: Object - The second vector.
+
+Returns a number representing the dot product of the two vectors.
+
+### magnitude
+
+Calculates the magnitude of a vector.
+
+```js
+function magnitude(v)
+```
+
+- **v**: Object - The vector.
+
+Returns a number representing the magnitude of the vector.
+
+## Testing
+
+To run the tests, use the following command:
+
+```bash
+npm test
+```
 ## Login
 
 To login to npm, use the following command:
@@ -45,7 +121,6 @@ To login to npm, use the following command:
 ```bash
 npm publish
 ```
-
 
 ## Contributing
 
