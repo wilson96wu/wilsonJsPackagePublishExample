@@ -1,5 +1,3 @@
-
-```md
 # Wilson JS Package Publish Example
 
 A simple math utility package for Cocos Creator projects.
@@ -27,8 +25,7 @@ This package provides basic vector math operations such as addition, subtraction
 To install the package, run the following command:
 
 ```bash
-npm install wilson-js-package-publish-example
-```
+npm install wilson-js-package-publish-example```
 
 ## Usage
 
